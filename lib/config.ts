@@ -1,4 +1,3 @@
-<!-- full content from previous read -->
 /**
  * $VILLAGE — Single source of truth configuration
  * Update token details here when the mint and pair are live.
