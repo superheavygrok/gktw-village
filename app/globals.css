@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core palette - soft, heartwarming, premium */
+  --color-cream: #FDFAF7;
+  --color-surface: #FFFFFF;
+  --color-rose: #F8C9D4;
+  --color-lavender: #EDE4F7;
+  --color-mint: #D8E9D3;
+  --color-sky: #D6EAF8;
+  --color-gold: #E8C78B;
+  --color-text: #2C2638;
+  --color-text-muted: #5F566E;
+
+  /* Village-inspired accents used sparingly for charm */
+  --color-village-orange: #E07A4D;
+  --color-village-blue: #5B8FA8;
+}
+
+body {
+  font-feature-settings: "kern" "liga" "tnum";
+}
+
+/* Premium storybook typography */
+h1, h2, .font-serif {
+  font-family: var(--font-playfair);
+  font-feature-settings: "kern" "liga";
+}
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+/* Soft, elevated cards */
+.card {
+  @apply bg-surface rounded-3xl shadow-soft border border-black/5;
+}
+
+/* Beautiful buttons with gentle magic */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-text text-surface px-8 py-3.5 font-medium transition-all hover:bg-black active:scale-[0.985] disabled:opacity-60;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-text/20 bg-surface px-8 py-3.5 font-medium text-text transition-all hover:bg-cream active:scale-[0.985];
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-2 text-sm font-medium text-text-muted transition-colors hover:text-text hover:bg-surface;
+}
+
+/* Section rhythm */
+.section {
+  @apply py-16 md:py-20;
+}
+
+/* Gentle focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Smooth everything */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Price ticker and chart container polish */
+.chart-container {
+  @apply rounded-3xl overflow-hidden border border-black/5 bg-white shadow-gentle;
+}
+
+/* Emotional stat numbers */
+.stat-number {
+  @apply font-serif text-5xl md:text-6xl font-semibold tracking-tighter;
+}
+
+/* Footer disclaimers - clear and respectful */
+.disclaimer {
+  @apply text-[13px] leading-relaxed text-text-muted;
+}
